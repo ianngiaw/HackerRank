@@ -16,9 +16,7 @@ for t in range(q):
         if max_amount == m - 1:
             break
         for j in range(i + 1, n):
-            amount = sub_arr_sums[j] - sub_arr_sums[i]
-            if amount < 0:
-                amount += m
+            amount = (sub_arr_sums[j] - sub_arr_sums[i]) % m
             max_amount = max(max_amount, amount)
             if max_amount == m - 1:
                 break
